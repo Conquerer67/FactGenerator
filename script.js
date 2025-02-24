@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const categoryBackgrounds = {
-        solarSystem: 'url("images/solarsystem.jpg")',
-        planets: 'url("images/planets.jpg")',
-        galaxy: 'url("images/galaxy.jpeg")',
-        manMade: 'url("images/manmade.jpeg")',
-        universe: 'url("images/universe.jpeg")',
-        stars: 'url("images/stars.jpeg")',
-        asteroids: 'url("images/asteroids.jpeg")'
+        solarSystem: 'url("solarsystem.jpg")',
+        planets: 'url("planets.jpg")',
+        galaxy: 'url("galaxy.jpeg")',
+        manMade: 'url("manmade.jpeg")',
+        universe: 'url("universe.jpeg")',
+        stars: 'url("stars.jpeg")',
+        asteroids: 'url("asteroids.jpeg")'
     };
 
     const factBox = document.getElementById('fact-box');
