@@ -23,6 +23,8 @@ h1 {
 
 .fact-box {
     background-color: #0f3460;
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -30,9 +32,10 @@ h1 {
     z-index: 0;
     color: #fff;
     font-size: 18px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
     cursor: pointer;
 }
+
 
 .fact-box::before {
     content: "";
