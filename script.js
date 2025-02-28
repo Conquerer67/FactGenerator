@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "Meteorites are fragments of asteroids or comets that survive the journey through Earth's atmosphere and land on the surface.", category: "asteroids" }
     ];
 
-    // Ensure the correct path to images
+    // Define background images for the body
     const categoryBackgrounds = {
-        solarSystem: 'url("images/solarsystem.jpg")',
-        planets: 'url("images/planets.jpg")',
-        galaxy: 'url("images/galaxy.jpeg")',
-        manMade: 'url("images/manmade.jpeg")',
-        universe: 'url("images/universe.jpeg")',
-        stars: 'url("images/stars.jpeg")',
-        asteroids: 'url("images/asteroids.jpeg")'
+        solarSystem: 'url("solarsystem.jpg")',
+        planets: 'url("planets.jpg")',
+        galaxy: 'url("galaxy.jpeg")',
+        manMade: 'url("manmade.jpeg")',
+        universe: 'url("universe.jpeg")',
+        stars: 'url("stars.jpeg")',
+        asteroids: 'url("asteroids.jpeg")'
     };
 
     const factBox = document.getElementById('fact-box');
@@ -51,11 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update the fact text
         factBox.textContent = selectedFact.text;
 
-        // Set the background image
-        factBox.style.backgroundImage = categoryBackgrounds[selectedFact.category];
-        factBox.style.backgroundSize = "cover";
-        factBox.style.backgroundPosition = "center";
-        factBox.style.backgroundRepeat = "no-repeat";
-        factBox.style.color = "white"; // Ensure text is readable
+        // Set the background image for the whole page (body)
+        document.body.style.backgroundImage = categoryBackgrounds[selectedFact.category];
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
     });
 });
