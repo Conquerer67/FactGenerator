@@ -12,16 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "Pluto, now classified as a dwarf planet, has five known moons.", category: "planets" },
         { text: "Mars has the largest dust storms in the solar system, which can last for months and cover the entire planet.", category: "planets" },
         { text: "The surface of Mars is covered in iron oxide, giving it a reddish appearance.", category: "planets" },
-        { text: "The Sun's core is about 15 million degrees Celsius (27 million degrees Fahrenheit).", category: "planets" },
-        { text: "A day on Venus is longer than a year on Venus.", category: "planets" },
-        { text: "The Moon is moving away from Earth at a rate of about 3.8 centimeters per year.", category: "planets" },
         { text: "The Milky Way galaxy will collide with the Andromeda Galaxy in about 4.5 billion years.", category: "galaxy" },
         { text: "The Andromeda Galaxy is the closest spiral galaxy to the Milky Way and is on a collision course with it.", category: "galaxy" },
         { text: "The first artificial satellite, Sputnik 1, was launched by the Soviet Union in 1957.", category: "manMade" },
         { text: "The International Space Station (ISS) orbits Earth approximately every 90 minutes.", category: "manMade" },
         { text: "The Hubble Space Telescope has helped astronomers determine the rate of expansion of the universe.", category: "manMade" },
-        { text: "The first human-made object to reach another planet was the Soviet spacecraft Venera 3, which crash-landed on Venus in 1966.", category: "manMade" },
-        { text: "The Voyager 1 spacecraft, launched in 1977, is the farthest human-made object from Earth.", category: "manMade" },
         { text: "The universe is around 13.8 billion years old.", category: "universe" },
         { text: "There are more stars in the universe than grains of sand on Earth.", category: "universe" },
         { text: "Black holes are regions of space where the gravitational pull is so strong that nothing, not even light, can escape.", category: "universe" },
@@ -35,14 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "Meteorites are fragments of asteroids or comets that survive the journey through Earth's atmosphere and land on the surface.", category: "asteroids" }
     ];
 
+    // Ensure the correct path to images
     const categoryBackgrounds = {
-        solarSystem: 'url("solarsystem.jpg")',
-        planets: 'url("planets.jpg")',
-        galaxy: 'url("galaxy.jpeg")',
-        manMade: 'url("manmade.jpeg")',
-        universe: 'url("universe.jpeg")',
-        stars: 'url("stars.jpeg")',
-        asteroids: 'url("asteroids.jpeg")'
+        solarSystem: 'url("images/solarsystem.jpg")',
+        planets: 'url("images/planets.jpg")',
+        galaxy: 'url("images/galaxy.jpeg")',
+        manMade: 'url("images/manmade.jpeg")',
+        universe: 'url("images/universe.jpeg")',
+        stars: 'url("images/stars.jpeg")',
+        asteroids: 'url("images/asteroids.jpeg")'
     };
 
     const factBox = document.getElementById('fact-box');
@@ -51,7 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
     generateBtn.addEventListener('click', () => {
         const randomIndex = Math.floor(Math.random() * facts.length);
         const selectedFact = facts[randomIndex];
+
+        // Update the fact text
         factBox.textContent = selectedFact.text;
+
+        // Set the background image
         factBox.style.backgroundImage = categoryBackgrounds[selectedFact.category];
+        factBox.style.backgroundSize = "cover";
+        factBox.style.backgroundPosition = "center";
+        factBox.style.backgroundRepeat = "no-repeat";
+        factBox.style.color = "white"; // Ensure text is readable
     });
 });
