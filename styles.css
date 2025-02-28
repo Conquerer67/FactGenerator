@@ -36,6 +36,17 @@ h1 {
     cursor: pointer;
 }
 
+#fact-box {
+    width: 100%;
+    height: 200px;  /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensure text is readable */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .fact-box::before {
     content: "";
